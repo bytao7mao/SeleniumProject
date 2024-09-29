@@ -17,7 +17,7 @@ public class Main {
     }
     public static void main(String[] args) {
 
-//        print("hello world");
+        print("hello JENKINS");
 //        print(true);
 //        print(1);
         // Set the property for webdriver.chrome.driver to be the location to your local              download of chromedriver
