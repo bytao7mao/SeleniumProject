@@ -17,20 +17,20 @@ public class Main {
     }
     public static void main(String[] args) {
 
-        print("hello world");
-        print(true);
+//        print("hello world");
+//        print(true);
 //        print(1);
         // Set the property for webdriver.chrome.driver to be the location to your local              download of chromedriver
 //        System.setProperty("webdriver.chrome.driver", "C:\\Users\\tao\\Downloads\\chrome-win64");
 
-//        ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--disable-search-engine-choice-screen");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-search-engine-choice-screen");
 //
 //        // Create new instance of ChromeDriver
-//        WebDriver driver = new ChromeDriver(options);
+        WebDriver driver = new ChromeDriver(options);
 //
 //        // And now use this to visit Google
-//        driver.get("https://formy-project.herokuapp.com/dragdrop");
+        driver.get("https://formy-project.herokuapp.com/dragdrop");
 
         // Find the text input element by its name
 //        WebElement element = driver.findElement(By.name("q"));
@@ -115,10 +115,10 @@ public class Main {
 
 
         //drag and drop
-//        WebElement image = driver.findElement(By.id("image"));
-//        WebElement box = driver.findElement(By.id("box"));
-//        Actions actions = new Actions(driver);
-//        actions.dragAndDrop(image, box).build().perform();
+        WebElement image = driver.findElement(By.id("image"));
+        WebElement box = driver.findElement(By.id("box"));
+        Actions actions = new Actions(driver);
+        actions.dragAndDrop(image, box).build().perform();
 
 //        try {
 //            Thread.sleep(20000);
@@ -126,20 +126,24 @@ public class Main {
 //            throw new RuntimeException(e);
 //        }
         //Close the browser
-//        driver.quit();
+        driver.quit();
 //        double[] prices = {5.63, -120.2, 0.99, 89.56, 12.81};
 //        double result = calculate(prices);
 //        print(result);
-        int[] arr = {2, 1, 3};
-//        int[] sortedArr = sort(arr);
-        sort(arr);
-        for (int a:arr){
-            System.out.println(a);
-        }
+//        int[] arr = {2, 1, 3};
+////        int[] sortedArr = sort(arr);
+//        sort(arr);
+//        for (int a:arr){
+//            System.out.println(a);
+//        }
+//
+//        String abc = "abc";
+////        System.out.println(reverse(abc));
+//        reverse2(abc);
 
-        String abc = "abc";
-//        System.out.println(reverse(abc));
-        reverse2(abc);
+
+        Main main = new Main();
+        main.test();
 
     }
     //return highest value
@@ -184,7 +188,7 @@ public class Main {
         for (int i = try1.length-1; i>=0; i--)
             System.out.print(try1[i]);
      }
-    public void test(double[] prices) {
+    public void test() {
         Integer immutableInt = 42;
         Integer modifiedInt = immutableInt + 8;
 
